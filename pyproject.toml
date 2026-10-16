@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wb-records-export"
+version = "0.1.0"
+description = "把 WorkBuddy 的对话历史导出成按原有分类组织的结构化 markdown 文档（只读，标准库）"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "wb-records-export contributors" }]
+keywords = ["workbuddy", "codebuddy", "export", "markdown", "conversation-history"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Utilities",
+]
+# 刻意不引第三方依赖：既能装到任意 python3.10+ 上，也让「只读你的数据」这件事
+# 不存在供应链风险。
+dependencies = []
+
+[project.scripts]
+wb-records-export = "wb_records_export.cli:main"
+
+[tool.setuptools]
+packages = ["wb_records_export"]
