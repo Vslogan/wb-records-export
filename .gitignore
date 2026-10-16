@@ -1,0 +1,23 @@
+# 导出产物：默认输出目录从不入库（里面是用户的真实对话）
+workbuddy-export/
+*-export/
+export/
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 编辑器 / 系统
+.DS_Store
+.idea/
+.vscode/
+*.swp
